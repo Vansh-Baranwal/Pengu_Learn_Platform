@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { Clock3, QrCode, ShieldCheck, TicketCheck } from "lucide-react";
-
-const QR = import.meta.env.VITE_PAYMENT_QR_URL || "/payment-qr.jpeg";
+import { Clock3, ShieldCheck, TicketCheck } from "lucide-react";
 const PROMO_DESTINATION = "https://drive.google.com/file/d/16n4Sa-UA4uJPqoM96AdopxK1vgkZ0PAK/view?usp=drive_link";
 
 export default function DownloadSection() {
@@ -26,18 +24,12 @@ export default function DownloadSection() {
       <div className="min-h-screen py-16">
         <div className="mx-auto flex w-full max-w-5xl flex-col items-center px-4 sm:px-6">
           <h1 className="w-full bg-gradient-to-br from-white via-neutral-200 to-neutral-400 bg-clip-text py-2 text-center text-4xl font-semibold tracking-tight text-transparent sm:text-6xl" style={{ fontFamily: "var(--font-heading)" }}>GET PENGU LEARN</h1>
-          <p className="mt-3 max-w-2xl text-center text-sm text-neutral-400 sm:text-base">Scan the QR to pay ₹950, or enter your promo code for a free download.</p>
+          <p className="mt-3 max-w-2xl text-center text-sm text-neutral-400 sm:text-base">Enter your promo code for a free download.</p>
 
           <div className="mt-7 w-full max-w-xl rounded-2xl border border-white/10 bg-neutral-900/80 p-5 sm:p-8">
             <div className="flex items-center justify-between">
-              <div><p className="text-xs font-bold uppercase tracking-widest text-sky-400">Lifetime access</p><p className="mt-2 text-3xl font-black">$10 <span className="text-base font-medium text-neutral-400">/ ₹950 one-time</span></p></div>
+              <div><p className="text-xs font-bold uppercase tracking-widest text-sky-400">Lifetime access</p><p className="mt-2 text-3xl font-black">Free <span className="text-base font-medium text-neutral-400">with promo code</span></p></div>
               <ShieldCheck size={28} className="text-neutral-500" />
-            </div>
-
-            <div className="mt-6 border-t border-white/10 pt-5">
-              <h2 className="flex items-center gap-2 font-semibold"><QrCode size={18} />Pay by UPI</h2>
-              <div className="mt-4 rounded-xl bg-white p-3"><img src={QR} alt="UPI payment QR code" className="mx-auto max-h-[420px] w-auto max-w-full object-contain" /></div>
-              <p className="mt-3 text-center text-xs text-neutral-400">Scan with any UPI app to pay. Payment is reviewed manually.</p>
             </div>
 
             <div className="mt-6 border-t border-white/10 pt-5">
